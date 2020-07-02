@@ -1,4 +1,6 @@
 body {
-	background:#999;
+	background: black;
 	font-family: arial;
+	text-align: center;
+	color: rgb(50,205,50);
 }
