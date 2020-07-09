@@ -7,12 +7,17 @@ body {
   background-color: black;
 }
 
+h3 {
+  color: #cf1d91;
+}
 .regular {
   font-family: "Clip";
   color: #ffe6ff;
   justify-content: center;
   align-items: center;
   text-align: center;
+  position: relative;
+  z-index: 3
 }
 
 a {
