@@ -5,8 +5,24 @@
     <meta name="viewport" content="width=device-width" />
     <title>Jrog Archive</title>
     <link rel="stylesheet" href="main.css" />
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
+  	 <div class="loader-wrapper">
+      <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+
+    <script>
+        $(window).on("load",function(){
+          $(".loader-wrapper").fadeOut("slow");
+        });
+    </script>
+
+<video autoplay muted loop id="driving">
+  <source src="driving.mp4" type="video/mp4">
+</video>
+
     <div class="sign">
       <span class="fast-flicker">J</span>rog's ‎‎<span class="flicker"> S</span>ite
     </div>
