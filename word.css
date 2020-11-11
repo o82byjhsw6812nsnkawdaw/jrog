@@ -1,0 +1,19 @@
+body {
+	background-color: black;
+}
+
+h1 {
+	color: red;
+	text-align: center;
+}
+
+h2 {
+	color: orange;
+	text-align: center;
+}
+
+.column {
+	float: left;
+	width: 50%;
+}
+
