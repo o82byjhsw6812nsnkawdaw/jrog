@@ -1,19 +1,32 @@
+html{
+	background-image: url('bg.jpg');
+}
 body {
-	background-color: black;
 }
 
 h1 {
-	color: red;
+	color: black;
 	text-align: center;
 }
-
+h1 span{
+	background-color: red;
+	padding: 10px;
+	border-style: outset;
+	border-color: red;
+	border-width: 3px;
+}
 h2 {
-	color: orange;
+	color: black;
 	text-align: center;
 }
-
+h2 span{
+	background-color: red;
+	padding: 10px;
+	border-style: outset;
+	border-color: red;
+	border-width: 3px;
+}
 .column {
 	float: left;
 	width: 50%;
 }
-
