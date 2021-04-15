@@ -127,7 +127,7 @@
             <input id="staticrypt-password"
                    type="password"
                    name="password"
-                   placeholder="password"
+                   placeholder="passphrase"
                    autofocus/>
 
             <input type="submit" class="staticrypt-decrypt-button" value="DECRYPT"/>
@@ -135,6 +135,9 @@
     </div>
 
 </div>
+<footer class="staticrypt-footer">
+    <p class="pull-right">Created with <a href="https://robinmoisson.github.io/staticrypt">StatiCrypt</a></p>
+</footer>
 
 
 <script>/**
@@ -6161,7 +6164,7 @@
         e.preventDefault();
 
         var passphrase = document.getElementById('staticrypt-password').value,
-            encryptedMsg = '46f91d071aacb3c8cb7742d78b5e076870601d76e267d148d43122f2cef7366cadd7467d65cd5f522c5db8f469165a6d4f46b80a5eca0b596be023d899984d05WIgOpIVkvoz6fJ6YRtjYyMnGptKnYKOzUAVXl76xVINX9wWBHMlpBDxZ/cb2c3m/qD7lU5f/00/ukf9RDQb6uUyy7DCNQ+1ALxbzlIt+7VZmsrkogg+GL76EbUdqZrEKqJO0ni9rWE6g7YXe4jCJtpufWEHGMAaPVPNKnAzLXAKn4Xa0LED0G2E5L2waGJ1mVsERtzrwDikPfEhpCYt63H+T0hFIhXZtuw0GuSGNZMOt0088SUqV0OJPt3wCdRGQ1Ef9z8ixOfcttzwxVR/U2DCpjehRGtKg3n89TwVBuGVKUsZMdwwB6ngXlJOuY7/ofQe1J2nuy9o4X9/mAnCuL2Xs0ze0FedLkBSHHJ8+tnSz1lJ2qSTSN5vtTuJ1c2CeU58wHrTWVlLZFIfQSPVhXqSMiqOeYQVPLf9bjq+bSncVvBgzE71pnfzOpeaF0IiOSgDg+aV2TEAnBihCVM4/6uOTV6tVqKc6mM3910cOOH81/J0QpiHVOnI+wbp8Yu8vbEYH4UXMoX7MoN2pRSJJVc4xMOOjJIsBN/JAofBbHnUT++Vzl8P5jjFiQsDdCWQo/CyMBbllrkaMD9v6kLILWGTWWVXEoKZqbcc92nJvwtU/AFnaiXZLjCryhMiSvX/wnWu4a/eHAAV7vJUA/IItnb1kdcLT0uMLnawizc+rXSMnSQjPEljaFJxYvcfQkd1imXt4qemUfAtFLbnofHkkvSB/isg9CP9yYVd6a329my8urwnYImtqbfuKuUwbBrlk0KK7CVuIZhywuqpt3Ky5eg76LQQNBZLuJIK3eak406d0l3pqjCsyekj+H4WsR8OEx75uluMSaTyjkUb4LNyK+wkqE6M2FO9rHu20fKkHEPnGHw0b3+rft/EorKsUqEq24SCsdBLxS/oRmFJkK3SjO5Jtsy03f1ibHKTq/dzAGeL3t//nUWRT1TeIt0LmUvTrMR0ncmyRIq0wDmlfta/Jf29MmoDObv3O21NwMsFBnXB0mT0wIq5xsvI9jdenVCQUGCNyECJZuHCWu9ve8wcf1uJkcv/tA7CaqQU4RcQWhINcdldFteMe3F/sTPTIsvatHkKIj6lHqX9QzBnRUpty5N5wILU80SwTSxR6EYwMJVAgnkBEoJupXSh3/9lu80zT+Y1UIt4FmcDs/3VjZz4xcQ+Zsc9cQmpMYiqE7gZ3idFUu+t74fbdVagmYN129ZSj31Mrw0EbvnIaP8DcrbOIXZufT5AYEqk5JAOyZpzJUIMJwse6JPgh25cizCN1U2C+zOf0LrLcID6J0V0j5xltV/7ClBYlM1ZAcNcYqazX5gxlSiugIe9DjRMIL/DLncPe2hQ0CnYidgBNZj70geXai9SNxpnr23exVPzicdS2TgfKuuG+hlQyKqSkMNOKO9X/kLgajcgHp7y+i4ewNf7Sxg==',
+            encryptedMsg = '4615eac9478227968d10504a5ac620008f92c78d5b14cf50cea024714e9d757f565c454b3fff6290d30f703a3857f2df65255dda8feee3923a62e5534d9a7529rXsTzddH4iUccDC35SSGdmwmacd6GWXQ+6HnrX4o9VvdgmP9vKv5qgnSaYTlDjrS3TwYXGYte0wvb47gcKRRCEy/8A5Eijj/ukrsG3Y8qsnXZAJLPjacbCGiKVc8wCHYnEkkq0Fvy1dR9RMTQ1eicBP1PydCIWcmBUeYSTchTVNDjGEPcyau0Yrl2NZ8iAXykju4EtBAj8tCNpspvldYajih8+0BOhEgtukgL4l1bpNFs+4CufV8lsmbzxwJmj9mBiRou+czFOVATpUtMtuFT24Wpfk+iFr+ap+kStY9hEbMhqQFvQKeUV3s/DQAenso/k+H+/1/VFtyJHZOWq9dukM+NKHt4YIIt5PWnEQjqjQhhHOdDquZTHWdRdOjnTmvKUG3k/QfSwYCJgcb22bHZI296d7x/SvtyKahFKf4pXpdh+DoUIfli5grLQnY49u2i6BRdBy69NJ1ks/HNqEFrjl0VPlADxpa3VmzKl8YpDBoDuozARgZdTG4YrN4G1Veqq9S5BOE/Rh9Bx1xdFLegCbTsv4ivukavLmkxHC0s9lT0N0xGdZfr45b7ENSO+SOs6+r1kDsltmKCCs0lEWkND/1kXLEcSGlsZS0pD6f0TJMgDIgRoqej9JBIEGt2uBcN0ZqJwN2UzDclPJo+Kx2DhoAz2IHkaNGfEhXA/341NCPTOd2O7y4V+oCJ55Nm0HthMxaAPVxDUULm1gmeJl5ueB2U7E6Copklu/3hOTSMv7OO4o4OJOw+dqopM8coWHy03Igkf4hexBMGsvweUqALxVVrvZZNIW099t+GhsmKw4YJ+hIBi0sd33/aUMxmnQA7lhIaRnQFA4NCcGFJJ6VmQhoWDDyCEDZUHxaatW9clLV/qVr9fWUlZOkxDr132WO5VOIsqdB/QG0LeopPQimDEoCniMsEB57OzDvfLdjqpC7dLzBQnuvTuNJhx2FWCXLkxx4Q0yUFx8c5PrcVjJdK0z0FlPwke7om6GQyhnlE+H/vkFHFkrbzo32fUO+atRpC4hP5EEX7u7bPqSdK7ouO4wBOolmllpZB4VRKCKNkLWbF9iV6dIRqSLphhrUx/6Jf017e+F/L/XXKi3dw9seg798EmX6hz1KlILY3+PIyofVLXYQjBrhNZjJ0I9j8UuF4+jHA4JvF432H4S8WY1oblVa3zbiDqQfTSEdJAg39nn+YYqU95eym5sOAOy9d576GmvIrJy1JHNJzJTX+B4uppsumAliT4lsq51Cfw9zqVtl1CKta8al5m+ywM2hBrF3PBJYb+mBCEjBmxXHEAp8ymUe2uiTlAz057EJuRPABKR/U6GLMdMBWY69gAjum7i13Znzc4pbEhlD9Erh2/b8iHjrd35YLxhqS6VWp2CrOILA64tyRLlrhX95SYV8eugyokC2liz+FlnWm1ktkzlIp/J1Wc6QG5eO2ylEZ2awp8A9PU+pT5XztrHnRBP4eSi8X9Qbkbp7HBv2+CEYLC8CJNACi3nkA7nuNgZvSWG1n13R/i10Z12KITLDh9S77cWdVF1ZK9tpmeSmrpfP2kGeuOllGfYDNbULMQwjCI+WS+xy+75t2s/wCxAuMUoyD2ybFy/5QIi+lYnEAK4pnUdbi72JwegG+noM1qL8s97Cp3jCqj59BjkcB5JK08u9MllmGejW2k1RWF5a7LEP85OJmw==',
             encryptedHMAC = encryptedMsg.substring(0, 64),
             encryptedHTML = encryptedMsg.substring(64),
             decryptedHMAC = CryptoJS.HmacSHA256(encryptedHTML, CryptoJS.SHA256(passphrase).toString()).toString();
